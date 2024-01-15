@@ -1,5 +1,6 @@
 package com.example.pos
 
+import Services.ApiService
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.widget.Button
@@ -20,11 +21,12 @@ class LoginActivity : AppCompatActivity() {
             val email = editTextEmail.text.toString()
             val password = editTextPassword.text.toString()
             if (email == "user@gmail.com" && password == "password") {
+            val response = ApiService.create()
                 // Login berhasil
-                Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Login Successful!", Toast.LENGTH_SHORT).show()
             } else {
                 // Login gagal
-                Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
+//                Toast.makeText(this, "Invalid username or password", Toast.LENGTH_SHORT).show()
             }
         }
     }
